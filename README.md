@@ -73,31 +73,33 @@ Visit: `http://localhost:3000`
 
 ## Dataset Processing (PyTorch)
 
-To prepare the dataset, run:
-
-```sh
-python dataset_loader.py
-```
-
-This script:
-
-- Loads images from the `train/` folder
-- Converts them to `(3,224,224)` tensors
+To prepare the dataset:
+- Convert them to `(3,224,224)` tensors
 - Assigns labels (`0` for 'R', `1` for 'O')
 
 ## Convert PyTorch Model to ONNX
 
 If you have a `.pth` model, convert it using:
 
-```sh
-python convert_model.py
+```python
+import torch
+
+# Load your trained PyTorch model
+model = torch.load("your_model.pth")
+model.eval()
+
+# Dummy input tensor (adjust shape as needed)
+dummy_input = torch.randn(1, 3, 224, 224)
+
+# Convert to ONNX format
+torch.onnx.export(model, dummy_input, "model.onnx", export_params=True, opset_version=11, do_constant_folding=True, input_names=['input'], output_names=['output'])
+
 ```
 
 This will save an `onnx` model inside the `models/` folder.
 
 
 ### Dataset
-<hr>
 <br>
 Link to dataset: <a href="https://www.kaggle.com/datasets/techsash/waste-classification-data/data">Click here</a>
 DOI citation: --
