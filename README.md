@@ -100,7 +100,7 @@ This will save an `onnx` model inside the `models/` folder.
 
 
 ## Dataset
-Link to dataset: <a href="https://www.kaggle.com/datasets/techsash/waste-classification-data/data">Click here</a> \n
-DOI citation: --
+Link to dataset: <a href="https://www.kaggle.com/datasets/techsash/waste-classification-data/data">Click here</a> 
+<div> DOI citation: --</div>
 
 
