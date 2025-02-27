@@ -99,9 +99,8 @@ torch.onnx.export(model, dummy_input, "model.onnx", export_params=True, opset_ve
 This will save an `onnx` model inside the `models/` folder.
 
 
-### Dataset
-<br>
-Link to dataset: <a href="https://www.kaggle.com/datasets/techsash/waste-classification-data/data">Click here</a>
+## Dataset
+Link to dataset: <a href="https://www.kaggle.com/datasets/techsash/waste-classification-data/data">Click here</a> \n
 DOI citation: --
 
 
