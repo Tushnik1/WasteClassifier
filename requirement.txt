@@ -1,1 +1,5 @@
-express multer ejs @pytorch/torchscript sharp
+express 
+multer 
+ejs 
+sharp 
+onnxruntime-node
